@@ -235,6 +235,7 @@ def apply_pod_profile(spawner, pod):
 def setup_environment(spawner):
     spawner.single_user_profiles.load_profiles(username=spawner.user.name)
     spawner.single_user_profiles.setup_services(spawner, spawner.image, spawner.user.name)
+    spawner.options_from_form('')
 
 def clean_environment(spawner):
     spawner.single_user_profiles.clean_services(spawner, spawner.user.name)
