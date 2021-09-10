@@ -245,8 +245,8 @@ c.JupyterHub.spawner_class = OpenShiftSpawner
 c.OpenShiftSpawner.pre_spawn_hook = setup_environment
 c.OpenShiftSpawner.post_stop_hook = clean_environment
 c.OpenShiftSpawner.modify_pod_hook = apply_pod_profile
-c.OpenShiftSpawner.cpu_limit = float(os.environ.get("SINGLEUSER_CPU_LIMIT", "1"))
-c.OpenShiftSpawner.mem_limit = os.environ.get("SINGLEUSER_MEM_LIMIT", "1G")
+c.OpenShiftSpawner.cpu_limit = float(os.environ.get("SINGLEUSER_CPU_LIMIT", "2"))
+c.OpenShiftSpawner.mem_limit = os.environ.get("SINGLEUSER_MEM_LIMIT", "2G")
 c.OpenShiftSpawner.storage_pvc_ensure = True
 
 if custom_notebook_namespace:
